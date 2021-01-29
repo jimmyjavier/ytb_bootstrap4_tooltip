@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+      .tooltip-custom .tooltip-inner {
+        background-color: #801515 !important;
+      }
+
+      .bs-tooltip-top .arrow::before,
+      .bs-tooltip-auto[x-placement^="top"] .arrow::before {
+        border-top-color: #801515 !important;
+      }
+
+      .bs-tooltip-right .arrow::before,
+      .bs-tooltip-auto[x-placement^="right"] .arrow::before {
+        border-right-color: #801515 !important;
+      }
+      .bs-tooltip-bottom .arrow::before,
+      .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+        border-bottom-color: #801515 !important;
+      }
+
+      .bs-tooltip-left .arrow::before,
+      .bs-tooltip-auto[x-placement^="left"] .arrow::before {
+        border-left-color: #801515 !important;
+      }
+    </style>
+    <title>Bootstrap 4. Tooltip.</title>
+  </head>
+  <body>
+    <main class="container">
+      <h2 class="mt-5">
+        Personalizando color del componente Tooltip en Bootstrap 4
+      </h2>
+      <div class="row mt-5">
+        <div class="col">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Tooltip on top"
+          >
+            Tooltip on top
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-toggle="tooltip"
+            data-placement="right"
+            title="Tooltip on right"
+          >
+            Tooltip on right
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Tooltip on bottom"
+          >
+            Tooltip on bottom
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-toggle="tooltip"
+            data-placement="left"
+            title="Tooltip on left"
+          >
+            Tooltip on left
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip({
+          boundary: "window",
+          template:
+            '<div class="tooltip tooltip-custom" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
+        });
+      });
+    </script>
+  </body>
+</html>
